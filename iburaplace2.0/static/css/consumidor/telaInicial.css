@@ -1,0 +1,69 @@
+
+  
+  body{
+    margin:0;
+  }
+  .telaPrincipal{
+    margin:0;
+    width:100vw;
+    height:100vh;
+    display:flex;
+   
+  }
+  .funcoes{
+    left:40%;
+  
+    opacity:0;
+    height:90%;
+    width:60%;
+    color:#141414;
+    position:absolute;
+  
+    justify-content:center;
+    text-align:center;
+    animation-name:funcoes;
+    animation-duration:5s;
+    animation-fill-mode:forwards;
+    
+  }
+  .botoes{
+    display: flex;
+    opacity:1;
+    height:40px;
+    width:600px;
+    justify-content: center;
+    bottom:0%;  
+    margin-left:320px;
+    margin-bottom:10px;
+    position:absolute; 
+    justify-content:right;
+    text-align:right;
+    animation-name:funcoes;
+    animation-duration:5s;
+    animation-fill-mode:forwards;
+  }
+  .botoes > a{
+    width:100%;
+    height:100%;
+    max-width:200px;
+    max-height:50px;
+   margin: 5px;
+   display: flex;
+   text-align: center;
+    text-decoration:none;
+    color:rgb(134, 10, 206);
+     background-color:yellow;
+    padding:15px 25px;
+    
+  }
+  
+  .barraFundo{
+    height:80%;
+    max-width:50%;
+    width:100%;
+    position:absolute;
+    margin-left:310px;
+    animation-fill-mode:forwards;
+  }
+  
+  

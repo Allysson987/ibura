@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/comerciante/imagen.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="formulario">
+    <form id="produtos" action="/produtos" method="post" enctype="multipart/form-data">
+       <div class="labelfile">
+        
+            <label for="file">Arquivo</label>
+            </div>
+        <div class="file">
+        
+            <input type="file" name="file" id="file" class=" validar" required="required">
+            </div>
+            <div class="labelproduto">
+        
+             <label for="produto">Nome </label>
+                </div>
+            <div class="produtos">
+            
+                <input type="teste" name="produtos" id="produtos" class=" validar" required="required">
+                </div>
+                <div class="labelpreco">
+        
+                    <label for="preco">Preco</label>
+                    </div>
+                <div class="preco">
+                
+                    <input type="text" name="preco" id="preco" class=" validar" required="required">
+                    </div>
+                    <div class='submit'>
+                        <button type="submit">enviar</button>
+                        </div>
+       
+    </form>
+      </div>
+    
+</body>
+</html>

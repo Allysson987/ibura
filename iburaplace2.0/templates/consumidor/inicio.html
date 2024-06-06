@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/consumidor/inicio.css">
+  
+  <title>Document</title>
+</head> 
+
+  <div class="tela">
+    <fieldset  class="cabeca">
+  <header >
+      
+   <img src="/static/img/Group 18.png">
+   
+  
+    </header>
+  </fieldset>
+    <div class="endereco">
+    
+      <p>{{rua}}, {{num}}</p>
+      <p style="display:none">{{num}}</p>
+    </div>
+    
+    <div class="pesquisa">
+    <form > 
+      <div class="input"> <input type="text" name="buscar" id="buscar" placeholder="buscar"></div>
+        <button class="lupa" type="submit"><img src="/static/img/Group 8.png"></button>
+      
+     
+      </form>
+    </div>
+ 
+    <!-- <div class="field">
+
+      
+    </div> -->
+    <div class="menu">
+     <a class="inicio" href="/">Inicio</a>
+     <a class="menu-resturantes" href="/restaurantes">Restaurantes</a>
+     <a class="mercados" href="/produtos">Mercados</a>
+     <a class="kitanda" href="/kitanda">Kitanda</a>
+     <a class="drogaria" href="drogaria">Drogaria</a>
+
+    </div>
+    <div class="carrinho">
+      <img src="/static/img/carrinho.png">
+    </div>
+    <a class="restaurantes" href="/restaurantes"> <div class="restaurantes">
+  <h2>Restaurantes</h2>
+  <img src="/static/img/food-576600_1280 1 (1).svg">
+ </div></a>
+ 
+ <a class="produtos" href="/produtos"> <div class="produtos">
+  <h2>Mercados</h2>
+  <img src="/static/img/logo2IP 3.svg">
+ </div></a>
+
+ <a class="bebidas" href="/bebidas"><div class="bebidas">
+  <h2>bebidas</h2>
+  <img src="/static/img/copo.png">
+ </div></a>
+
+ <a class="servicos" href="/servicos"><div class="servicos"> 
+  <h2>Serviços</h2>
+  <img src="/static/img/Rectangle 28.png">
+ </div></a>
+
+ 
+
+ <h2 class="title">Mercados próximos a você</h2>
+<a class="proximidade"><div>
+  <div class="imagem">  <img src="/static/img/Perfil.png"></div>
+
+  <div class="loja">
+  <h3>Mercearia do tião</h3>
+  <h3>Localização: xxxxx</h3>
+</div>
+</div></a>
+<h2 class="melhores-lojas">Melhores lojas</h2>
+<a class="melhores"><div>
+  <div class="imagem-melhor"><img src="/static/img/Perfil.png"></div>
+  <div class="loja-nome">
+    <h3>mercearia tiago</h3>
+    <h3>Localização:xxxxxx</h3>
+  </div></div></a>
+</div>
+</div>
+
+  
+
+  </div>
+</div>
+</div>
+<hr>
+<div class="rodape">
+
+<div class="direitos">
+<p class="titulo">Direitos reservados a Ibura Place ltda.</p>
+<p>Contato(empresarial)</p>
+<p>Localização</p>
+<p>Email</p>
+</div>
+<div class="conta">
+  <p class="titulo">Conta</p>
+  <p><a class="link" href="/excluirConta">Excluir Conta</a></p>
+  <p><a class="link" href="/logout" >Logout</a></p>
+  <p>Edita perfil</p>
+</div>
+<div class="ajuda">
+  <p class="titulo">Ajuda</p>
+  <p>Fale Conosco: 0800 xxxxx</p>
+  <p>Email: xxxxx</p>
+</div>
+</div>
+</div>
+
+</body>
+</html>

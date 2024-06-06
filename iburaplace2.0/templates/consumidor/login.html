@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/static/css/consumidor/formulario.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="tela">
+  <div class="titulo">
+    
+  </div>
+    
+  <div class="formulario">
+    <h2>Login de Usuário </h2>
+  <form id="login" action="/login" method="post">
+    
+     <img src="/static/img/usuario.png" class="labelCPF">
+    <div class="cpf">
+      
+    <input type="text" name="cpf" id="cpf" class=" validar" required="required">
+    </div>
+    <div class="labelSenha">
+      <img src="/static/img/cadeadro.png">
+    </div>
+    <div class="senha">
+    <input type="password" name="senha" id="senha" class="validar" autocomplete="on" required="required">
+    </div>
+    <div class='submit'>
+    <button type="submit">enviar</button>
+    </div>
+  </form>
+  <a href="exibircadastro">Ainda não tem cadastro? Faça o seu</a>
+  </div>
+  </div>
+  <script src="/static/js/login.js"></script>
+</body>
+</html>

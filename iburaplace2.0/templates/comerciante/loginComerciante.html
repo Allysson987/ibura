@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/css/comerciante/login.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+      
+  <div class="tela">
+    <div class="titulo">
+      
+    </div>
+      
+    <div class="formulario">
+      <h2>Login de comerciante </h2>
+   <form id="login" action="/loginComerciante" method="post">
+      
+       <img src="/static/img/usuario.png" class="labelCPF">
+      <div class="cpf">
+        
+      <input type="text" name="cnpj" id="cnpj" class=" validar" required="required">
+      </div>
+      <div class="labelSenha">
+        <img src="/static/img/cadeadro.png">
+      </div>
+      <div class="senha">
+      <input type="password" name="senha" id="senha" class="validar" autocomplete="on" required="required">
+      </div>
+      <div class='submit'>
+      <button type="submit">enviar</button>
+      </div>
+    </form>
+    <a href="/cadastro_comerciantes">Não possui cadastro? Faça o seu !</a>
+    </div>
+    </div>
+  
+  </body>
+</body>
+</html> 

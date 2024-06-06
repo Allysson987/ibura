@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/css/comerciante/comerciante.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+  <div class="imagens">
+
+    {%if id !="" %}
+
+    <div class="tela">
+      <fieldset  class="cabeca">
+    <header >
+        
+     <img src="/static/img/Group 18.png">
+     
+    
+      </header>
+    </fieldset>
+      <div class="endereco">
+      
+        <p>Rua, Ademir Martins, Ibura,Recife/PE</p>
+      </div>
+      
+      <div class="pesquisa">
+      <form > 
+        <input type="text" id="buscar" placeholder="buscar">
+        <!-- <button class="lupa" type="submit"><img src="/static/img/Group 8.png"></button> -->
+        </form>
+      </div>
+   
+      <!-- <div class="field">
+  
+        
+      </div> -->
+      <div class="menu">
+       <a class="inicio" href="/comerciante">Inicio</a>
+       <a class="historicoVendas" href="/relatorio{{id}}">Seu relatório de vendas</a>
+       
+  
+      </div>
+      
+      <div class="opcoes">
+       <a href="/inserir">Adicionar produtos</a>
+
+      </div>
+      <div class="seusProdutos">
+        <h2 class="produtosAdicionados">Seus produtos</h2>
+        {%for i in ordem%}
+       <div id="mostrarProduto" class="mostrarProduto">
+  
+        <h3 id="nome">{{i[0]}}</h3>
+        <div class="imagem">  <img id="produto" class="produto" src="/static/img/{{i[2]}}"></div>
+        <p id="localizacao" class="localizacao">Preco: {{i[1]}}<p>
+        <p id="descricao" class="descricao">Descricao: {{i[3]}}</p>
+        <p id="link-compra" style="display: none;">{{i[5]}}</p>
+        
+     
+       </div>
+        {%endfor%}
+      </div>
+      </div></div>
+      <hr>
+      <div class="rodape">
+    
+        <div class="direitos">
+        <p class="titulo">Direitos reservados a Ibura Place ltda.</p>
+        <p>Contato(empresarial)</p>
+        <p>Localização</p>
+        <p>Email</p>
+        </div>
+        <div class="conta">
+          <p class="titulo">Conta</p>
+          <p><a class="link" href="/excluirConta">Excluir Conta</a></p>
+          <p><a class="link" href="/logoutComercio" >Logout</a></p>
+          <p>Edita perfil</p>
+        </div>
+        <div class="ajuda">
+          <p class="titulo">Ajuda</p>
+          <p>Fale Conosco: 0800 xxxxx</p>
+          <p>Email: xxxxx</p>
+        </div>
+        </div>
+        <div id="lista" class="produto-selecionado">
+         <h3 id="mostrar-nome"></h3>
+          <div id="metadinha" class="metadinha"><img id="imagem" src=""><div>
+          <div class="legenda">
+          <p id="mostrar-descricao"></p>
+          <p id="mostrar-localizacao"></p>
+        </div>
+        <div class="navegacao">
+
+          <a id="carrinho" href=""><button class="carrinho-2">Editar</button></a>
+            <a id="comprar" href=""><button class="comprar">Ok</button></a>
+          </div>
+            <div id="fechar">
+              <img class="fechar" src="/static/img/botao-x.png">
+            </div></div>
+        <script>
+          let   produto=document.getElementById('mostrarProduto');
+
+          let lista=document.getElementById('lista');
+          let fechar=document.getElementById('fechar')
+          produto.addEventListener('click', ()=>{
+         let img=document.getElementById("produto");
+         let valor=img.getAttribute("src");
+         let cor=document.getElementById("tela");
+        let nome=document.getElementById("nome").innerText;
+        let descricao=document.getElementById("descricao").innerText;
+        let localizacao=document.getElementById('localizacao').innerText;
+        let compra=document.getElementById("link-compra").innerText;
+        let mostrar_descricao=document.getElementById('mostrar-descricao');
+        let mostrar_localizacao=document.getElementById('mostrar-localizacao');
+        let mostrar_nome=document.getElementById("mostrar-nome")
+         let metadinha=document.getElementById('imagem');
+        let carrinho=document.getElementById("carrinho")
+        let comprar=document.getElementById("comprar")
+        carrinho.src=`/carrinho${compra}`
+        carrinho.setAttribute('href',`/editar${compra}`)
+        comprar.addEventListener('click', ()=>{
+          lista.style.display='none'
+        })
+         console.log(compra)
+         console.log(comprar)
+        
+         metadinha.src=valor
+         mostrar_descricao.innerHTML=descricao
+         mostrar_localizacao.innerHTML=localizacao
+         mostrar_nome.innerHTML=nome
+         lista.style.display='block'
+          });
+          fechar.addEventListener("click", ()=>{
+          lista.style.display="none";
+          })</script>
+    {%else%}
+  </div>
+
+  <nav class="navegacao">
+    <a  class="cadastro" href="/cadastro_comerciantes">&nbsp  &nbsp   &nbsp  &nbsp Cadastro</a>
+    <a class="login" href="/login_comerciante">&nbsp  &nbsp   &nbsp  &nbsp Login</a>
+  </nav>
+  {%endif%}
+ 
+</body>
+</html>

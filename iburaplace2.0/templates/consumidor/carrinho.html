@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/consumidor/restaurantes.css">
+  
+  <title>Document</title>
+</head> 
+<body>
+  <div class="tela">
+    <fieldset  class="cabeca">
+  <header >
+      
+   <img src="/static/img/Group 18.png">
+   
+  
+    </header>
+  </fieldset>
+    <div class="endereco">
+    
+      <p>Rua, Ademir Martins, Ibura,Recife/PE</p>
+    </div>
+    
+    <div class="pesquisa">
+    <form > 
+      <input type="text" id="buscar" placeholder="buscar">
+      <!-- <button class="lupa" type="submit"><img src="/static/img/Group 8.png"></button> -->
+      </form>
+    </div>
+ 
+    <!-- <div class="field">
+
+      
+    </div> -->
+    <div class="menu">
+     <a class="inicio" href="/">Inicio</a>
+     <a class="menu-restaurantes" href="/restaurantes">Restaurantes</a>
+     <a class="mercados" href="/mercados">Mercados</a>
+     <a class="kitanda" href="/kitanda">Kitanda</a>
+     <a class="drogaria" href="drogaria">Drogaria</a>
+
+    </div>
+    <div class="carrinho">
+      <img src="/static/img/carrinho.png">
+    </div>
+    <div class="config">
+        {%for i in ordem%}
+        
+       
+       
+           <div class="listagem">
+           <h3>{{i[0]}}</h3>
+           <div class="imagem">  <img src="/static/img/Perfil.png"></div>
+           <p class="localizacao">Localização: a 400m de distância<p>
+           <a class="links" href="/loja{{i[4]}}">Ver opcões  &nbsp  &nbsp   &nbsp  &nbsp ></a>
+           </div>
+      
+           
+        {%endfor%}
+        </div>
+      </div>
+    <hr>
+    <div class="rodape">
+  
+      <div class="direitos">
+      <p class="titulo">Direitos reservados a Ibura Place ltda.</p>
+      <p>Contato(empresarial)</p>
+      <p>Localização</p>
+      <p>Email</p>
+      </div>
+      <div class="conta">
+        <p class="titulo">Conta</p>
+        <p><a class="link" href="/excluirConta">Excluir Conta</a></p>
+        <p><a class="link" href="/logout" >Logout</a></p>
+        <p>Edita perfil</p>
+      </div>
+      <div class="ajuda">
+        <p class="titulo">Ajuda</p>
+        <p>Fale Conosco: 0800 xxxxx</p>
+        <p>Email: xxxxx</p>
+      </div>
+      </div>
+    </body>
+    </html>
+   

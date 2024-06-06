@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/consumidor/formulario.css">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div class="tela">
+    <div class="titulo">
+      </div>
+      <div class="formulario">
+     
+  <form id="cadastro" action="cadastro" method="post">
+    <h1 id="h1">Faça seu cadastro!!</h1>
+ <label for="nome">NOME</label>
+ <div class="nome">
+  <input type="text" id="nome" name="nome" required="required">
+ </div>
+    <label for="cpf">CPF</label>
+    <div class="cpf">
+      
+    <input type="text" name="cpf" id="cpf" class=" validar" required="required">
+    </div>
+    <div class="labelcep">
+      <label for="cep">CEP</label>
+    </div>
+    <div class="cep">
+      <input type="text" id="cep" name="cep">
+    </div>
+    <div class="labelcep">
+      <label for="numero"> Número de casa</label>
+    </div>
+    <div class="numero">
+      <input type="text" id="numero" name="numero">
+    </div>
+    <div class="labelSenha">
+      <label for="senha">SENHA</label>
+    </div>
+    <div class="senha">
+    <input type="password" name="senha" id="senha" class="validar" autocomplete="on" required="required">
+    </div>
+    <div class="rua">
+      
+    </div>
+    <div class='submit'>
+    <button type="submit">enviar</button>
+    </div>
+  </form>
+  </div>
+  </div>
+  </form>
+</div>  <script src="/static/js/consumidor/cadastro.js"></script>
+</body>
+</html>
